@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+
+  </head>
+  <body>
+    <button id="btn">获取数据</button>
+  </body>
+  <script src="/javascripts/axios.js"></script>
+  <script>
+    let btn = document.getElementById('btn')
+    btn.onclick = function () {
+        axios.get('/api/deme2').then( res => {
+            console.log(res)
+        })
+    }
+    // btn.onclick = function () {
+    //     axios.get('/getCors').then( res => {
+    //         console.log(res)
+    //     })
+    // }
+
+
+
+  </script>
+</html>
